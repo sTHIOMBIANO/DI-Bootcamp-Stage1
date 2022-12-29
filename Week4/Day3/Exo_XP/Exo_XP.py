@@ -82,7 +82,7 @@ more_on_zara={'creation_date':1975,'number_stores':10000}
 band.update(more_on_zara)
 print("la valeur du dernier:",band['number_stores'])
 
-"la valeur de la clé number_stores a pris la valeur conenu dans le diction more_on_zara"
+print("la valeur de la clé number_stores a pris la valeur conenu dans le diction more_on_zara")
 
 os.system("pause")
 
@@ -94,12 +94,12 @@ users=["Mickey","Minnie","Donald","Ariel","Pluto"]
 disney_users_A={}
 disney_users_B={}
 disney_users_C={}
-
-for n in range(len(users)):
+n=0
+while n < len(users):
     for elem in users:
         disney_users_A[elem]=n
         disney_users_B[n]=elem
-       
+        n+=1  
        
 for k in sorted(disney_users_A.keys()):
     disney_users_C[k]=disney_users_A[k]
@@ -113,14 +113,15 @@ print(disney_users_C)
 
 disney_user={}
 disney_user_MP={}
-for n in range(len(users)):
+n=0
+while n < len(users):
     for elem in users:
         for j in elem:
             if j=='i':
                 disney_user[elem]=n
-        
+       
         if elem[0]=='M' or elem[0]=='P':
             disney_user_MP[elem]=n
-        
+        n+=1
 print(disney_user)
 print(disney_user_MP)  

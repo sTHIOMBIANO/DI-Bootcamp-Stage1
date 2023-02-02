@@ -1,0 +1,50 @@
+CREATE DATABASE "Bootcamp"
+with 
+OWNER=postgres 
+ENCODING='utf-8' 
+LC_COLLATE='French_Burkina Faso.1252' 
+LC_CTYPE='French_Burkina Faso.1252' 
+TABLESPACE=pg_default 
+CONNECTION LIMIT=-1
+
+
+CREATE TABLE Students(
+    id serial prymary key,
+    last_name varchar(100),
+   first_name varchar(100)
+   birth_date date
+)
+
+
+insert into Students(first_name,last_name,birth_date) values
+('Marc','Benichou','02/11/1998'),
+('Yoan','Cohen','03/12/2010'),
+('Lea','Benichou','27/07/1987'),
+('Amelia','Dux','07/04/1996'),
+('David','Grez','14/06/2003'),
+('Omer','Simpson','03/10/1980');
+
+insert into Students(first_name,last_name,birth_date) values('THIOMBIANO','Simon','7/11/1998');
+
+
+
+select * from Students;
+select last_name,first_name from Students;
+select last_name,first_name from Students where id='2';
+select last_name,first_name from Students where last_name='Benichou' AND first_name='Marc';
+select last_name,first_name from Students where last_name='Benichou' OR first_name='Marc';
+
+select * from Students where first_name LIKE '%a%';
+
+select * from Students where first_name LIKE 'a%';
+
+select * from Students where first_name LIKE '%a';
+
+select * from Students where first_name LIKE '__a%';
+
+select * from Students where id='1' or '3';
+
+select * from Students where birth_date>'1/01/2000';
+
+
+

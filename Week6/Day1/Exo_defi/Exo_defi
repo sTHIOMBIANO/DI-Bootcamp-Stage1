@@ -1,0 +1,10 @@
+
+
+
+select count() * from actors;
+
+
+insert into actors(last_name,first_name,age,number_oscars) values('','','','');
+
+on contate que cela n\est pas possible car les champ de type date ou numeric ne 
+peuvent pas etre vide meme sans definir une contrainte

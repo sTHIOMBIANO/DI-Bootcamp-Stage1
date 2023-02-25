@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>page2</title>
+</head>
+<body>
+	<h1>la liste des animaux</h1>
+	<h1>{% for animal in animals %}
+			
+
+				<li>{{ animal.id }}</li> 
+				<li>{{ animal.name }}</li>
+				<li>{{ animal.legs }} </li>
+				<li>{{ animal.weight }}</li>
+				<li>{{ animal.height }}</li>
+				<li>{{ animal.speed }}</li>
+				<li>{{ animal.family }}</li>
+			
+
+	{% endfor %}</h1>
+</body>
+</html>
